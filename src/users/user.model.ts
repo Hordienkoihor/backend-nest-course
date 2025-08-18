@@ -16,11 +16,11 @@ export class User extends Model<User, UserCreationAttribute> {
 
     @ApiProperty({example: 'example@domen.com', description: 'Unique user email address'})
     @Column({type: DataType.STRING, unique: true, allowNull: false})
-    email: string;
+    declare email: string;
 
     @ApiProperty({example: "12345", description: 'User password'})
     @Column({type: DataType.STRING, allowNull: false})
-    password: string;
+     password: string;
 
     @ApiProperty({example: 'false', description: 'User banned status'})
     @Column({type: DataType.BOOLEAN, defaultValue: false})
